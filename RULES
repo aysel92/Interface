@@ -1,0 +1,83 @@
+INTERFACE
+
+INTERFACE IS A CONTRACT BETWEEN A CLASS AND OUTSIDE WORLD
+why we need interface
+to achive abstraction
+
+
+
+ANY CLASS THAT IMPLEMENTS/INHERITS FROM AN INTERFACE IS RESPONSIBLE TO PROVIDE IMPLEMENTATIOM FOR ANY ABSTRACT METHODS.
+
+
+INTEFACE IS A SPECIAL TYPE THAT IT USED TO ACHIVE ABSTARCTION.
+BEFORE JAVA 8 INTERFACE WE PURE ABTSRACTION,AFTER JAVA 8 WE CAN ALSO INCLUDE SOME NON-ABSTRACT METHODS
+
+before Java 8 we could only add abstract methods into Interfaces it was pure abstarctions.
+
+public interface Language(){
+public abstract void english();
+public abstract void name();
+
+
+
+}
+
+
+Starting from Java 8 we can also add static and default methods, thats no more pure abstarctions.
+example public default void read(){
+}
+
+
+==============================
+A Class can implement an interface using implements keyword.
+
+Java allows multiple implementation of interfaces but does not allow multiple inheritance of classes
+
+we just separate interfaces using comma(,)
+
+
+======================
+Interface can also store constants
+Interface can ONLY contain PUBLIC STATIC FINAL VARIABLES.
+EVEN IF YOU DONT MENTION THOESE KEYWORDS ,
+ ALL VARIABLES AUTOMATICLY public static final
+
+public static final boolean value=true;
+
+
+//it is mandatory to have body inside static and default methods in Interface
+EXAMPLE- public default void read(){
+}//
+
+YOU CANNOT USE DEFAULT AND STATIC METHOD INSIDE THE INTERFACE AT THE SAME TIME.
+
+WE CAN ACCESS STATIC METHOD USING INTERFACE NAME AND STATIC METHOD NAME
+
+
+==========================================
+WE CANNOT CREATE OBJECT OF INTERFACE
+WE CANNOT DEFINE CONSTRUCTOR INTERFACE
+===========
+within interface we can define:
+
+1.Variables---- public static final
+2.methods--- abstract, default,static
+3.Constructor--- not allowed
+
+
+
+
+If an interface has a static method ,that method can Only 
+be accessed or used or called from Interface and not
+ from implementing concrete class
+
+=============================================
+interface can extends ONLY interfaces
+
+
+public interface A extends B,C,D{
+}
+
+interfaces extends classes dont have to implement abstratct methods
+the only responsible is class which is going to implement one of theese interfaces
+
